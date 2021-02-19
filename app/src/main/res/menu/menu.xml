@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/ic_baseline_date_range_24"
+            android:id="@+id/first"
+            android:title="Appointment" />
+        <item
+            android:icon="@drawable/ic_baseline_medical_services_24"
+            android:id="@+id/second"
+            android:title="Test Bookings" />
+        <item
+            android:icon="@drawable/ic_baseline_enhanced_encryption_24"
+            android:id="@+id/third"
+            android:title="Orders" />
+        <item
+            android:icon="@drawable/ic_baseline_chat_24"
+            android:id="@+id/forth"
+            android:title="Consultation" />
+        <item
+            android:icon="@drawable/ic_baseline_person_pin_24"
+            android:id="@+id/fifth"
+            android:title="My Doctor" />
+        <item
+            android:icon="@drawable/ic_baseline_favorite_border_24"
+            android:id="@+id/six"
+            android:title="Medical Records" />
+        <item
+            android:icon="@drawable/ic_baseline_access_time_24"
+            android:id="@+id/seventh"
+            android:title="Reminders" />
+        <item
+            android:icon="@drawable/ic_baseline_payment_24"
+            android:id="@+id/eight"
+            android:title="Payment Cash">
+
+        </item>
+    </group>
+
+</menu>
