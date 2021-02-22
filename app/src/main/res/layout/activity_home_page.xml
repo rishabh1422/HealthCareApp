@@ -152,6 +152,8 @@
             android:layout_width="match_parent"
             android:layout_height="220dp">
             <androidx.cardview.widget.CardView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
                 app:cardCornerRadius="10dp"
                 android:layout_marginTop="17dp"
                 android:layout_marginLeft="30dp"
@@ -176,6 +178,8 @@
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
                 app:cardCornerRadius="10dp"
                 android:layout_marginTop="17dp"
                 android:layout_marginLeft="20dp"
@@ -208,6 +212,8 @@
             android:layout_width="match_parent"
             android:layout_height="220dp">
             <androidx.cardview.widget.CardView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
                 app:cardCornerRadius="10dp"
                 android:layout_marginTop="17dp"
                 android:layout_marginLeft="30dp"
@@ -235,6 +241,8 @@
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
                 app:cardCornerRadius="10dp"
                 android:layout_marginTop="17dp"
                 android:layout_marginLeft="20dp"
