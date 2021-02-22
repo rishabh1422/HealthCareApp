@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Smart Health</string>
+    <string name="your_string_here"> <u>Say Hello Doctor...</u></string>
 </resources>
