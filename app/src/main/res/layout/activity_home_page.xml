@@ -21,6 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
+                    android:id="@+id/profile"
                     android:src="@drawable/doc"
                     android:layout_width="50dp"
                     android:layout_height="40dp">
