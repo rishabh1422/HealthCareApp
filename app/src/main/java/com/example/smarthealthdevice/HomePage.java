@@ -10,16 +10,16 @@ import android.widget.ImageView;
 import androidx.appcompat.widget.Toolbar;
 
 public class HomePage extends AppCompatActivity {
-    ImageView profile;
+    ImageView profile1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_home_page );
         Toolbar toolbar=findViewById( R.id.toobar );
-        profile=findViewById( R.id.profile );
+        profile1=findViewById( R.id.profile );
         setSupportActionBar( toolbar );
-        profile.setOnClickListener( new View.OnClickListener() {
+        profile1.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(HomePage.this,yourhealthprofile.class);
