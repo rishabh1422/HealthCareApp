@@ -24,7 +24,7 @@
            android:layout_marginRight="10dp"
            android:layout_marginTop="260dp"
            android:inputType="textEmailAddress"
-           android:hint="Email Address"
+           android:hint="Email  Address"
            android:id="@+id/emaial"
            android:layout_width="match_parent"
            android:layout_height="wrap_content">
