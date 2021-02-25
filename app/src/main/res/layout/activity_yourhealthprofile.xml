@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".yourhealthprofile">
+    <FrameLayout
+        android:id="@+id/fl"
+        android:background="@color/purple_500"
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="130dp">
+            <ImageView
+                android:src="@drawable/ic_baseline_arrow_back_ios_new_24"
+                android:layout_marginTop="20dp"
+                android:layout_width="50dp"
+                android:layout_height="24dp">
+
+            </ImageView>
+            <TextView
+                android:textSize="20dp"
+                android:text="Back"
+                android:textColor="#fff"
+                android:layout_marginTop="17dp"
+                android:layout_width="80dp"
+                android:layout_height="25dp">
+
+            </TextView>
+            <TextView
+
+                android:textColor="#fff"
+                android:text="Your Health Profile"
+                android:textSize="22dp"
+                android:layout_marginTop="17dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+        <TextView
+
+            android:textColor="#fff"
+            android:text="10% Complete"
+            android:textSize="13dp"
+            android:layout_marginTop="43dp"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+        </TextView>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <androidx.cardview.widget.CardView
+
+                app:cardCornerRadius="5dp"
+                android:layout_marginLeft="10dp"
+                android:background="#fff"
+                android:layout_marginTop="5dp"
+                android:layout_width="100dp"
+                android:layout_height="30dp">
+                <TextView
+                    android:textColor="#000"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:text="Personal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textColor="#fff"
+                android:layout_marginLeft="30dp"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:text="Medical"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textColor="#fff"
+                android:layout_marginLeft="20dp"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:text="LifeStyle"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+    <LinearLayout
+        android:layout_marginTop="130dp"
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+    <androidx.cardview.widget.CardView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/fl"
+        android:layout_width="250dp"
+        android:layout_height="100dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginTop="15dp"
+                android:text="Name"
+                android:layout_marginLeft="20dp"
+                android:textColor="#8cbed6"
+                android:textSize="18dp"
+                android:layout_width="100dp"
+                android:layout_height="25dp">
+
+            </TextView>
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="0dp"
+                android:text="Rishabh Singh"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:layout_width="150dp"
+                android:layout_height="30dp">
+
+            </TextView>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:src="@drawable/doc"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="80dp"
+                android:layout_height="60dp">
+
+            </ImageView>
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="#8cbed6"
+                    android:text="Edit"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp">
+
+                </TextView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/em"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="260dp"
+            android:inputType="textEmailAddress"
+            android:hint="Contact Number"
+            android:id="@+id/emaial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="63dp"
+        android:id="@+id/ek"
+        android:layout_below="@+id/em"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:inputType="textPassword"
+            android:hint="Date of Birth"
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="200dp"
+        android:id="@+id/em1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="255dp"
+            android:inputType="textEmailAddress"
+            android:hint="Blood Group"
+            android:id="@+id/emaia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ek1"
+        android:layout_below="@+id/em"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:id="@+id/password1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="260dp"
+        android:id="@+id/eml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="260dp"
+            android:inputType="textEmailAddress"
+            android:hint="Marital Status"
+            android:id="@+id/emaikal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/elk"
+        android:layout_below="@+id/em"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:inputType="text"
+            android:hint="Email Address"
+            android:id="@+id/lpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+</RelativeLayout>
