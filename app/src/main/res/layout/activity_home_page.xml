@@ -70,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp">
             <FrameLayout
-                android:background="#0000FF"
+                android:background="@color/purple_700"
                 android:id="@+id/frag_c"
                 android:layout_width="200dp"
                 android:layout_height="200dp">
@@ -132,7 +132,7 @@
 
             </FrameLayout>
             <FrameLayout
-                android:background="#0000FF"
+                android:background="@color/purple_700"
                 android:layout_width="200dp"
                 android:layout_height="200dp">
                 <ImageView
