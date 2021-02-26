@@ -1,32 +1,36 @@
 package com.example.smarthealthdevice;
+
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "person")
-public class ProfileModel
-{
+public class ProfileModel {
     @PrimaryKey(autoGenerate = true)
     private int id;
-    public ProfileModel(int id, String contact, String email, String dob, String bloodGroup, String marital_status) {
-        this.id = id;
-        this.Contact = contact;
-        this.Email = email;
-        this.Dob = dob;
-        this.BloodGroup = bloodGroup;
-        this.Marital_status = marital_status;
-    }
-    @Ignore
-    public ProfileModel(String contact, String email, String dob, String bloodGroup, String marital_status) {
-        this.Contact = contact;
-        this.Email = email;
-        this.Dob = dob;
-        this.BloodGroup = bloodGroup;
-        this.Marital_status = marital_status;
-    }
+    @ColumnInfo(name = "Email")
+    private String Email;
+    @ColumnInfo(name = "Dob")
+    private String Dob;
+    @ColumnInfo(name = "BloodGroup")
+    private String BloodGroup;
+    @ColumnInfo(name = "Marital_status")
+    private String Marital_status;
     @ColumnInfo(name = "Contact")
     private String Contact;
+
+    public ProfileModel() {
+
+    }
+
+    public ProfileModel( String contact, String email, String dob, String bloodGroup, String marital_status) {
+        this.Contact = contact;
+        this.Email = email;
+        this.Dob = dob;
+        this.BloodGroup = bloodGroup;
+        this.Marital_status = marital_status;
+    }
 
     public int getId() {
         return id;
@@ -75,15 +79,6 @@ public class ProfileModel
     public void setMarital_status(String marital_status) {
         Marital_status = marital_status;
     }
-
-    @ColumnInfo(name = "Email")
-    private String Email;
-    @ColumnInfo(name = "Dob")
-    private String Dob;
-    @ColumnInfo(name = "BloodGroup")
-    private String BloodGroup;
-    @ColumnInfo(name = "Marital_status")
-    private String Marital_status;
 
 
 }

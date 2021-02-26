@@ -28,7 +28,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String email1=email.getText().toString().trim();
                 String pass1=pass.getText().toString().trim();
-                if(TextUtils.isEmpty( email1 ))
+                if(email1.equals("abc@gmail.com")&& pass1.equals( "abc@123" ))
+                {
+                    Intent i=new Intent(MainActivity.this, HomePage.class);
+                    startActivity( i );
+                    Toast.makeText( MainActivity.this, "You successfully Logged", Toast.LENGTH_SHORT ).show();
+                } else if(TextUtils.isEmpty( email1 ))
                 {
                     Toast.makeText( MainActivity.this, "Enter Email", Toast.LENGTH_SHORT ).show();
                 }
@@ -36,17 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     Toast.makeText( MainActivity.this, "Enter Password", Toast.LENGTH_SHORT ).show();
                 }
-                else if(email1.equals( "abc@gmail.com" )&&pass1.equals( "abc@123" ))
-                {
-                    Intent i=new Intent(MainActivity.this,HomePage.class);
-                    startActivity( i );
-                    Toast.makeText( MainActivity.this, "You successfully Logged", Toast.LENGTH_SHORT ).show();
-                }
-
             }
-
-
         } );
-
     }
 }
