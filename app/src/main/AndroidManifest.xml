@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartHealthDevice">
-        <activity android:name=".yourhealthprofile"></activity>
+        <activity android:name=".Medical.Oxygen"></activity>
+        <activity android:name=".Medical.BodyTemptrature" />
+        <activity android:name=".Medical.SugarLeval" />
+        <activity android:name=".Medical.MedicalIndex" />
+        <activity android:name=".Medical.Medical" />
+        <activity android:name=".yourhealthprofile" />
         <activity android:name=".HomePage" />
         <activity android:name=".MainActivity">
             <intent-filter>

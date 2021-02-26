@@ -80,6 +80,7 @@
 
             </androidx.cardview.widget.CardView>
             <TextView
+                android:id="@+id/medical"
                 android:layout_marginTop="5dp"
                 android:textColor="#fff"
                 android:layout_marginLeft="30dp"
