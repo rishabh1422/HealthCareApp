@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Medical.MedicalIndex">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:id="@+id/toobar"
+        android:elevation="8dp"
+        android:layout_height="?attr/actionBarSize">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/profile"
+                android:src="@drawable/doc"
+                android:layout_width="50dp"
+                android:layout_height="40dp">
+
+            </ImageView>
+            <TextView
+
+                android:textAlignment="center"
+                android:background="#ffc0cb"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="60dp"
+                android:text="Explore"
+                android:textColor="#000"
+                android:layout_height="25dp">
+
+            </TextView>
+            <Button
+                android:layout_marginTop="6.5dp"
+                android:textSize="9dp"
+                android:text="plus"
+                android:layout_marginLeft="0dp"
+                android:layout_width="80dp"
+                android:layout_height="32dp">
+
+            </Button>
+            <ImageView
+                android:src="@drawable/ic_baseline_account_balance_wallet_24"
+                android:layout_marginTop="8dp"
+                android:layout_width="40dp"
+                android:layout_height="30dp">
+
+            </ImageView>
+            <Button
+                android:layout_marginTop="6.5dp"
+                android:textSize="9dp"
+                android:text="100$"
+                android:layout_marginLeft="1dp"
+                android:layout_width="60dp"
+                android:layout_height="32dp">
+
+            </Button>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+        <androidx.cardview.widget.CardView
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/fl"
+            android:layout_width="250dp"
+            android:layout_height="100dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:text="Name"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#8cbed6"
+                    android:textSize="18dp"
+                    android:layout_width="100dp"
+                    android:layout_height="25dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Rishabh Singh"
+                    android:textColor="#000"
+                    android:textSize="18dp">
+
+                </TextView>
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Blood Prassure"
+                    android:textColor="@color/purple_700"
+                    android:textSize="18dp">
+
+                </TextView>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:src="@drawable/doc"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp">
+
+                </ImageView>
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_marginLeft="35dp"
+                    android:textColor="#8cbed6"
+                    android:text="Edit"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp">
+
+                </TextView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/em"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="260dp"
+            android:inputType="text"
+            android:hint="Date/Time"
+            android:id="@+id/emaial"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:onClick="onClick"
+        android:text="Select"
+        android:textAllCaps="false"
+        android:id="@+id/select"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="265dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp">
+
+    </Button>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="63dp"
+        android:id="@+id/ek"
+        android:layout_below="@+id/em"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:inputType="text"
+            android:hint="Lower Reading"
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="200dp"
+        android:id="@+id/em1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="255dp"
+            android:inputType="text"
+            android:hint="Pulse"
+            android:id="@+id/emaia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ek1"
+        android:layout_below="@+id/em"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:inputType="text"
+            android:hint="Upper Reading"
+            android:id="@+id/password1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>

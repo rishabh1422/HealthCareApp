@@ -28,18 +28,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String email1=email.getText().toString().trim();
                 String pass1=pass.getText().toString().trim();
-                if(email1.equals("abc@gmail.com")&& pass1.equals( "abc@123" ))
+                if(email1.equals(getString(R.string.userName))&& pass1.equals( getString(R.string.password) ))
                 {
                     Intent i=new Intent(MainActivity.this, HomePage.class);
                     startActivity( i );
-                    Toast.makeText( MainActivity.this, "You successfully Logged", Toast.LENGTH_SHORT ).show();
+                    Toast.makeText( MainActivity.this, getString(R.string.sucess_msg), Toast.LENGTH_SHORT ).show();
                 } else if(TextUtils.isEmpty( email1 ))
                 {
-                    Toast.makeText( MainActivity.this, "Enter Email", Toast.LENGTH_SHORT ).show();
+                    Toast.makeText( MainActivity.this, getString(R.string.email_placeholder), Toast.LENGTH_SHORT ).show();
                 }
                 else if(TextUtils.isEmpty( pass1 ))
                 {
-                    Toast.makeText( MainActivity.this, "Enter Password", Toast.LENGTH_SHORT ).show();
+                    Toast.makeText( MainActivity.this, getString(R.string.password_placeholder), Toast.LENGTH_SHORT ).show();
                 }
             }
         } );

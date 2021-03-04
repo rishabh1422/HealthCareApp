@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Meditrack</string>
     <string name="your_string_here"> <u>Say Hello Doctor...</u></string>
+    <string name="email_placeholder">Enter Email</string>
+    <string name="sucess_msg">You successfully Logged</string>
+    <string name="password_placeholder">Enter Password</string>
+    <string name="userName">abc@gmail.com</string>
+    <string name="password">abc@123</string>
 </resources>
