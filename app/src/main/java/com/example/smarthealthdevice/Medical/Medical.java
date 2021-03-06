@@ -23,14 +23,14 @@ public class Medical extends AppCompatActivity {
         card1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(Medical.this,MedicalIndex.class);
+                Intent i=new Intent(Medical.this, BloodPrassure.class);
                 startActivity(i);
             }
         });
         card2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(Medical.this,SugarLeval.class);
+                Intent i=new Intent(Medical.this, SugarLevelActivity.class);
                 startActivity(i);
             }
         });

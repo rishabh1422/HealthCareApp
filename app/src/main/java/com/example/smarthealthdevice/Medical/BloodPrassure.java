@@ -13,7 +13,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.Calendar;
 
-public class MedicalIndex extends AppCompatActivity implements View.OnClickListener {
+public class BloodPrassure extends AppCompatActivity implements View.OnClickListener {
     TextInputEditText date;
     Button select;
     private int mYear, mMonth, mDay;
@@ -21,7 +21,7 @@ public class MedicalIndex extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_medical_index);
+        setContentView(R.layout.activity_blood_prasure);
         date=findViewById(R.id.emaial);
         select=findViewById(R.id.select);
     }
@@ -36,8 +36,8 @@ public class MedicalIndex extends AppCompatActivity implements View.OnClickListe
             mDay = c.get(Calendar.DAY_OF_MONTH);
             DatePickerDialog datePickerDialog=new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                 @Override
-                public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
-                    date.setText(i+ ":" + (i1+1)+":"+i2);
+                public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                    date.setText(day+ "/" + (month+1)+"/"+year);
                 }
             },mYear,mMonth,mDay);
             datePickerDialog.show();
