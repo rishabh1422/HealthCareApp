@@ -9,14 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartHealthDevice">
-        <activity android:name=".Medical.Oxygen"></activity>
+        <activity android:name=".HealthStatus"/>
+        <activity android:name=".Medical.Oxygen" />
         <activity android:name=".Medical.BodyTemptrature" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".Medical.SugarLevelActivity" />
         <activity android:name=".Medical.BloodPrassure" />
         <activity android:name=".Medical.Medical" />
         <activity android:name=".yourhealthprofile" />
         <activity android:name=".HomePage" />
-        <activity android:name=".Medical.SugarLevelActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

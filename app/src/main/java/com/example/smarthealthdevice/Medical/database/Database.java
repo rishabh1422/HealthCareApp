@@ -4,8 +4,10 @@ import android.content.Context;
 
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.room.TypeConverters;
 
 @androidx.room.Database( entities = SugarLevelModel.class,exportSchema = false,version = 1)
+@TypeConverters({DateConverter.class})
 public abstract class Database extends RoomDatabase {
     private static final String DB_NAME = "health_care_db";
     private static Database instance;

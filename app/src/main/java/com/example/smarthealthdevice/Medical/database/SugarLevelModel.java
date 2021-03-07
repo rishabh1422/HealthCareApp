@@ -4,12 +4,14 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.util.Date;
+
 @Entity(tableName = "SugarLevelModal")
 public class SugarLevelModel {
     @PrimaryKey(autoGenerate = true)
     private int id;
     @ColumnInfo(name = "date")
-    private String date;
+    private Date date;
     @ColumnInfo(name = "upper_reading")
     private float upperReading;
     @ColumnInfo(name = "lower_reading")
@@ -19,7 +21,7 @@ public class SugarLevelModel {
 
     }
 
-    public SugarLevelModel( String date, float upperReading, float lowerReading) {
+    public SugarLevelModel( Date date, float upperReading, float lowerReading) {
         this.date = date;
         this.upperReading = upperReading;
         this.lowerReading = lowerReading;
@@ -33,11 +35,11 @@ public class SugarLevelModel {
         this.id = id;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 

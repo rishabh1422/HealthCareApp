@@ -5,37 +5,40 @@
     <group android:checkableBehavior="single">
         <item
             android:icon="@drawable/ic_baseline_date_range_24"
-            android:id="@+id/first"
+            android:id="@+id/health_status_menu"
+            android:title="Your Health Status" />
+        <item
+            android:icon="@drawable/ic_baseline_date_range_24"
+            android:id="@+id/appointment_menu"
             android:title="Appointment" />
         <item
             android:icon="@drawable/ic_baseline_medical_services_24"
-            android:id="@+id/second"
+            android:id="@+id/test_bookings_menu"
             android:title="Test Bookings" />
         <item
             android:icon="@drawable/ic_baseline_enhanced_encryption_24"
-            android:id="@+id/third"
+            android:id="@+id/orders_menu"
             android:title="Orders" />
         <item
             android:icon="@drawable/ic_baseline_chat_24"
-            android:id="@+id/forth"
+            android:id="@+id/consultation_menu"
             android:title="Consultation" />
         <item
             android:icon="@drawable/ic_baseline_person_pin_24"
-            android:id="@+id/fifth"
+            android:id="@+id/my_doctor_menu"
             android:title="My Doctor" />
         <item
             android:icon="@drawable/ic_baseline_favorite_border_24"
-            android:id="@+id/six"
+            android:id="@+id/medical_records_menu"
             android:title="Medical Records" />
         <item
             android:icon="@drawable/ic_baseline_access_time_24"
-            android:id="@+id/seventh"
+            android:id="@+id/reminders_menu"
             android:title="Reminders" />
         <item
             android:icon="@drawable/ic_baseline_payment_24"
-            android:id="@+id/eight"
+            android:id="@+id/payment_menu"
             android:title="Payment Cash">
-
         </item>
     </group>
 

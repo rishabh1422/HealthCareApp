@@ -20,6 +20,7 @@ import com.example.smarthealthdevice.Utils;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class SugarLevelActivity extends AppCompatActivity implements View.OnClickListener {
@@ -28,6 +29,7 @@ public class SugarLevelActivity extends AppCompatActivity implements View.OnClic
     Button saveButton;
     final int MINIMUM_SUGAR_LEVEL = 50;
     final int MAXIMUM_SUGAR_LEVEL = 120;
+    Date selectedDate = new Date();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +58,10 @@ public class SugarLevelActivity extends AppCompatActivity implements View.OnClic
             DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                    selectedDate.setMonth(month);
+                    selectedDate.setYear(year);
+                    selectedDate.setDate(day);
+
                     dateTextInput.setText(Utils.formattedDate(day, month, year));
                 }
             }, c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH));
@@ -70,7 +76,6 @@ public class SugarLevelActivity extends AppCompatActivity implements View.OnClic
 
     // save sugar level data in room database
     public void saveSugarRecord() {
-        String date = dateTextInput.getText().toString();
         float upperReading = 0;
         float lowerReading = 0;
         try {
@@ -95,7 +100,7 @@ public class SugarLevelActivity extends AppCompatActivity implements View.OnClic
         }
 
         Database appDatabase = Database.getInstance(this);
-        SugarLevelModel profileModel = new SugarLevelModel(date, upperReading, lowerReading);
+        SugarLevelModel profileModel = new SugarLevelModel(selectedDate, upperReading, lowerReading);
 
         /* *
          *  Insert and get data using Database Async way
@@ -104,7 +109,7 @@ public class SugarLevelActivity extends AppCompatActivity implements View.OnClic
             @Override
             public void run() {
                 // Insert single data for a date, if data already exist for that date than update it
-                List<SugarLevelModel> sugarRecords = appDatabase.sugarLevelDao().getSugarLevelRecord(date);
+                List<SugarLevelModel> sugarRecords = appDatabase.sugarLevelDao().getSugarLevelRecord(selectedDate);
                 if (sugarRecords.size() > 0) {
                     appDatabase.sugarLevelDao().updateSugarRecord(profileModel);
                     Log.e("TAG", "sugar level data Updated!!!");
