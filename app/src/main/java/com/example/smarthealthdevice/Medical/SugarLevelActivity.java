@@ -89,7 +89,7 @@ public class SugarLevelActivity extends AppCompatActivity implements View.OnClic
             Toast.makeText(this, "Upper reading is less than lower reading", Toast.LENGTH_SHORT).show();
             return;
         }
-        // reading must be between 20-50
+        // reading must be between 50-120
         if ((Float.compare(upperReading, MINIMUM_SUGAR_LEVEL) < 0) ||
                 (Float.compare(upperReading, MAXIMUM_SUGAR_LEVEL) > 0) ||
                 (Float.compare(upperReading, MINIMUM_SUGAR_LEVEL) < 0) ||
@@ -100,7 +100,7 @@ public class SugarLevelActivity extends AppCompatActivity implements View.OnClic
         }
 
         Database appDatabase = Database.getInstance(this);
-        SugarLevelModel profileModel = new SugarLevelModel(selectedDate, upperReading, lowerReading);
+        SugarLevelModel sugarLevelModel = new SugarLevelModel(selectedDate, upperReading, lowerReading);
 
         /* *
          *  Insert and get data using Database Async way
@@ -111,10 +111,10 @@ public class SugarLevelActivity extends AppCompatActivity implements View.OnClic
                 // Insert single data for a date, if data already exist for that date than update it
                 List<SugarLevelModel> sugarRecords = appDatabase.sugarLevelDao().getSugarLevelRecord(selectedDate);
                 if (sugarRecords.size() > 0) {
-                    appDatabase.sugarLevelDao().updateSugarRecord(profileModel);
+                    appDatabase.sugarLevelDao().updateSugarRecord(sugarLevelModel);
                     Log.e("TAG", "sugar level data Updated!!!");
                 } else {
-                    appDatabase.sugarLevelDao().insertSugarRecord(profileModel);
+                    appDatabase.sugarLevelDao().insertSugarRecord(sugarLevelModel);
                     Log.e("TAG", "sugar level data saved!!!");
                 }
 

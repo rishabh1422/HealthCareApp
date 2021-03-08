@@ -33,23 +33,5 @@ public class HomePage extends AppCompatActivity {
             }
         });
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        Log.d("TAG", "menu clicked");
-
-        switch (item.getItemId()) {
-            case R.id.health_status_menu:
-                Log.d("TAG", "health_status_menu");
-                return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }
